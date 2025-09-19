@@ -1,4 +1,4 @@
-package com.gtsystems.bakerysystem.pesistence;
+package com.gtsystems.bakerysystem.persistence;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -44,7 +44,7 @@ public class AccountsPersistanceHandler {
     public static void addSale(String clientName, Double newSaleTotal) throws IOException {
         Map<String, Double> currentData = loadData();
         Double oldTotal = currentData.get(clientName);
-        newSaleTotal += oldTotal;
+        if(oldTotal != null) newSaleTotal += oldTotal;
         currentData.put(clientName, newSaleTotal);
         saveData(currentData);
     }
