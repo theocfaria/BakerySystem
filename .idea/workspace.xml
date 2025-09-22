@@ -5,9 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1efde4d2-88bd-40f7-9b79-cee24625410c" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/HelloApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/HelloApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/pesistence/AccountsPersistanceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/pesistence/AccountsPersistanceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/hello-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/hello-view.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/MainApp.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/SearchBarComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/screens/HomeScreen.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/HelloApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/HelloController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,13 +36,13 @@
 }</component>
   <component name="GithubPullRequestsUISettings">{
   &quot;selectedUrlAndAccountId&quot;: {
-    &quot;url&quot;: &quot;https://github.com/Gabriel-Andrioli/BakerySystem.git&quot;,
+    &quot;url&quot;: &quot;https://github.com/theocfaria/BakerySystem.git&quot;,
     &quot;accountId&quot;: &quot;549dcb6d-fad3-455d-8685-953bcef5926d&quot;
   }
 }</component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="32vwqkQNyYckCyd8CtgGQ9oDnWr" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -47,11 +51,14 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "Application.HelloApplication.executor": "Run",
+    "Application.Main.executor": "Run",
+    "Application.MainApp.executor": "Run",
     "Application.Main].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
+    "last_opened_file_path": "C:/Repositorios/BakerySystem",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -64,10 +71,14 @@
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\frena\IdeaProjects\BakerySystem" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.gtsystems.bakerysystem" />
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager">
-    <configuration name="Main]" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.gtsystems.bakerysystem.HelloApplication" />
+    <configuration name="MainApp" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="com.gtsystems.bakerysystem.MainApp" />
       <module name="BakerySystem" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -90,6 +101,9 @@
       <option name="presentableId" value="Default" />
       <updated>1758314547991</updated>
       <workItem from="1758314549669" duration="1867000" />
+      <workItem from="1758319776243" duration="308000" />
+      <workItem from="1758320094091" duration="622000" />
+      <workItem from="1758557638625" duration="4185000" />
     </task>
     <servers />
   </component>
