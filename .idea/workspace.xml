@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1efde4d2-88bd-40f7-9b79-cee24625410c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/IdeiaDeLayout.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/ButtonNewSale.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/SearchComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/screens/NewSaleScreen.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/SearchBarComponent.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/SearchComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/SearchComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/screens/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/screens/HomeScreen.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -70,6 +65,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Repositorios\BakerySystem" />
       <recent name="C:\Users\frena\IdeaProjects\BakerySystem" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -105,7 +101,7 @@
       <workItem from="1758319776243" duration="308000" />
       <workItem from="1758320094091" duration="622000" />
       <workItem from="1758557638625" duration="4226000" />
-      <workItem from="1759156182337" duration="6871000" />
+      <workItem from="1759156182337" duration="9246000" />
     </task>
     <servers />
   </component>
