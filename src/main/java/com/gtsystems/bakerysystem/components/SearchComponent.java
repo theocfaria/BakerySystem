@@ -16,17 +16,19 @@ public class SearchComponent {
         Map<String, Double> data = AccountsPersistanceHandler.loadData();
 
         VBox contentBox = new VBox();
-        contentBox.setPrefWidth(250);
         contentBox.setSpacing(10);
         contentBox.setPadding(new Insets(10));
         contentBox.setStyle(
                 "-fx-background-color: #f4f4f4;" +
-                        "-fx-border-color: #c0c0c0;" +
-                        "-fx-border-width: 3px;" +
-                        "-fx-border-radius: 5;"
+                "-fx-border-color: #c0c0c0;" +
+                "-fx-border-width: 3px;" +
+                "-fx-border-radius: 5;"
         );
 
+        contentBox.setMaxWidth(Region.USE_PREF_SIZE);
+
         TextField searchField = new TextField();
+        searchField.setPrefColumnCount(15);
         searchField.setStyle("-fx-font-size: 22px; -fx-pref-height: 25px; -fx-font-weight: bold");
 
         Label searchTitle = new Label("ACESSAR CONTA");

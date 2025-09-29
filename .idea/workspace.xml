@@ -5,7 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1efde4d2-88bd-40f7-9b79-cee24625410c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/GeneralInfoButton.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/HomeTitle.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/InfosComponents/InfosComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/PertinentClientsComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/ButtonNewSale.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/InfosComponents/ButtonNewSale.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/SearchComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/SearchComponent.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/screens/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/screens/HomeScreen.java" afterDir="false" />
     </list>
@@ -44,25 +49,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.HelloApplication.executor": "Run",
-    "Application.Main.executor": "Run",
-    "Application.MainApp.executor": "Run",
-    "Application.Main].executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Repositorios/BakerySystem",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.HelloApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApp.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Repositorios/BakerySystem&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Repositorios\BakerySystem" />
@@ -101,7 +106,9 @@
       <workItem from="1758319776243" duration="308000" />
       <workItem from="1758320094091" duration="622000" />
       <workItem from="1758557638625" duration="4226000" />
-      <workItem from="1759156182337" duration="9246000" />
+      <workItem from="1759156182337" duration="9444000" />
+      <workItem from="1759168092509" duration="1551000" />
+      <workItem from="1759180875975" duration="1004000" />
     </task>
     <servers />
   </component>

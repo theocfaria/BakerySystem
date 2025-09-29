@@ -1,4 +1,4 @@
-package com.gtsystems.bakerysystem.components;
+package com.gtsystems.bakerysystem.components.InfosComponents;
 
 import java.io.IOException;
 
