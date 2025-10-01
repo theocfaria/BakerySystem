@@ -12,20 +12,21 @@ import java.io.IOException;
 import java.util.Map;
 
 public class SearchComponent {
-    public HBox create() throws IOException {
+    public VBox create() throws IOException {
         Map<String, Double> data = AccountsPersistanceHandler.loadData();
 
         VBox contentBox = new VBox();
         contentBox.setSpacing(10);
         contentBox.setPadding(new Insets(10));
+
         contentBox.setStyle(
                 "-fx-background-color: #f4f4f4;" +
-                "-fx-border-color: #c0c0c0;" +
-                "-fx-border-width: 3px;" +
-                "-fx-border-radius: 5;"
+                        "-fx-border-color: #c0c0c0;" +
+                        "-fx-border-width: 3px;" +
+                        "-fx-border-radius: 5;"
         );
 
-        contentBox.setMaxWidth(Region.USE_PREF_SIZE);
+        contentBox.setAlignment(Pos.CENTER);
 
         TextField searchField = new TextField();
         searchField.setPrefColumnCount(15);
@@ -34,26 +35,27 @@ public class SearchComponent {
         Label searchTitle = new Label("ACESSAR CONTA");
         searchTitle.setStyle("-fx-font-size: 22px; -fx-font-weight: bold; -fx-font-family: 'Times New Roman';");
 
-        contentBox.getChildren().addAll(searchTitle, searchField);
-
-        HBox externalBox = new HBox();
-
         Label resultLabel = new Label();
+        resultLabel.setStyle("-fx-font-size: 22px; -fx-font-weight: bold; -fx-font-family: 'Times New Roman';");
         searchField.setOnAction(e -> {
             String key = searchField.getText();
 
             if (data.containsKey(key)) {
-                resultLabel.setText("Total da conta: \n" + data.get(key));
+                resultLabel.setText("Total: R$" + data.get(key));
             } else {
                 resultLabel.setText("Chave não encontrada!");
             }
         });
 
-        externalBox.getChildren().addAll(contentBox,resultLabel);
+        contentBox.getChildren().addAll(searchTitle, searchField, resultLabel);
 
+        HBox externalBox = new HBox();
         externalBox.setAlignment(Pos.CENTER);
-        externalBox.setSpacing(10);
+        externalBox.getChildren().addAll(contentBox);
 
-        return externalBox;
+        VBox lastBox = new VBox();
+        lastBox.setAlignment(Pos.CENTER);
+        lastBox.getChildren().addAll(externalBox);
+        return lastBox;
     }
 }

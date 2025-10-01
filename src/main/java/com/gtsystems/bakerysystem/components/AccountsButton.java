@@ -1,4 +1,4 @@
 package com.gtsystems.bakerysystem.components;
 
-public class PertinentClientsComponent {
+public class AccountsButton {
 }

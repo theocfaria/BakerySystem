@@ -22,10 +22,9 @@ public class HomeScreen {
         root.setTop(title);
 
         SearchComponent searchComponent = new SearchComponent();
-        root.setLeft(searchComponent.create());
+        root.setCenter(searchComponent.create());
         
         BorderPane.setMargin(searchComponent.create(), new Insets(0, 10, 10, 10));
-        root.setCenter(null);
 
         Scene scene = new Scene(root, 1100, 800);
         stage.setTitle("Tela principal");
