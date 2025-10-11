@@ -5,14 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1efde4d2-88bd-40f7-9b79-cee24625410c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/HomeController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/home.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/accounts.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/accounts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/MainApp.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/TestController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/persistence/AccountsPersistanceHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/persistence/AccountsPersistanceHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/test.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/HomeController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/home.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -119,7 +114,7 @@
       <workItem from="1759352535933" duration="3646000" />
       <workItem from="1759360592589" duration="485000" />
       <workItem from="1760191737083" duration="1422000" />
-      <workItem from="1760193413041" duration="7585000" />
+      <workItem from="1760193413041" duration="9510000" />
     </task>
     <servers />
   </component>
