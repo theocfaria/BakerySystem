@@ -6,14 +6,14 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="197.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gtsystems.bakerysystem.controllers.NewSaleController">
+<AnchorPane prefHeight="197.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gtsystems.bakerysystem.controllers.ApplicationController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="28.0" prefHeight="38.0" prefWidth="263.0" style="-fx-border-color: BLACK; -fx-border-width: 0.5px;" text="ADICIONAR NOVA COMPRA">
          <font>
             <Font name="System Bold" size="18.0" />
          </font>
       </Label>
-      <TextField fx:id="input" layoutX="28.0" layoutY="88.0" prefHeight="48.0" prefWidth="263.0" promptText="Digite o valor da compra...">
+      <TextField fx:id="input" layoutX="28.0" layoutY="88.0" onAction="#confirmValue" prefHeight="48.0" prefWidth="263.0" promptText="Digite o valor da compra...">
          <font>
             <Font size="18.0" />
          </font>

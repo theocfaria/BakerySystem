@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1efde4d2-88bd-40f7-9b79-cee24625410c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/NewSaleController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/new-sale.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/accounts.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/accounts.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/HomeController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/HomeController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/home.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/NewSaleController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/new-sale.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/new-sale.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,8 +91,7 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26830.84" />
-        <option value="bundled-js-predefined-d6986cc7102b-3aa1da707db6-JavaScript-IU-252.26830.84" />
+        <option value="bundled-jdk-9823dce3aa75-bf35d07a577b-intellij.indexing.shared.core-IU-252.26199.169" />
       </set>
     </attachedChunks>
   </component>

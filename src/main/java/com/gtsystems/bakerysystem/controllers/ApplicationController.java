@@ -17,7 +17,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Map;
 
-public class HomeController {
+public class ApplicationController {
     @FXML public HBox searchContainer = new HBox();
     @FXML public VBox resultContainer = new VBox();
     @FXML public TextField searchField = new TextField();
@@ -25,21 +25,27 @@ public class HomeController {
     @FXML public Button searchButton = new Button();
     @FXML public Button payButton = new Button();
     @FXML public Button addSaleButton = new Button();
+    @FXML public TextField input;
+    @FXML Button cancelButton;
+    @FXML Button confirmButton;
     public static String client;
-    public static Double balance;
 
-    public HomeController() throws IOException {
+    public ApplicationController() throws IOException {
         searchContainer.setLayoutX(146);
-    }
-
-    @FXML
-    void toggleVisibility(VBox element) {
-        element.setVisible(!element.isVisible());
     }
 
     void showResult() throws IOException {
         searchContainer.setLayoutY(146);
-        toggleVisibility(resultContainer);
+        resultContainer.setVisible(true);
+    }
+
+    void updateResult(String key) throws IOException {
+        Map<String, Double> data = AccountsPersistanceHandler.loadData();
+        String balance = data.get(key).toString();
+        resultLabel.setText(
+                "Nome: " + key + "\n" +
+                        "Total: R$" + balance.replace(".", ",")
+        );
     }
 
     @FXML
@@ -49,13 +55,8 @@ public class HomeController {
         String key = searchField.getText();
 
         if (data.containsKey(key)) {
-            client = key;
-            balance = data.get(key);
             showResult();
-            resultLabel.setText(
-                    "Nome: " + key + "\n" +
-                    "Total: R$" + data.get(key)
-                    );
+            updateResult(key);
         }
         // else {
         //  colocar lógica para chamar a função para criar cliente novo
@@ -66,24 +67,42 @@ public class HomeController {
     void payBill() throws IOException {
         String key = searchField.getText();
         AccountsPersistanceHandler.addSale(key, 0.0);
-        Map<String, Double> data = AccountsPersistanceHandler.loadData();
-        resultLabel.setText(
-                "Nome: " + key + "\n" +
-                        "Total: R$ " + data.get(key)
-        );
+        updateResult(key);
     }
 
     @FXML
     void openNewSalePanel() throws IOException {
+        client = searchField.getText();
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("new-sale.fxml"));
         Parent root = fxmlLoader.load();
 
-        Stage novaJanela = new Stage();
-        novaJanela.setTitle("Adicionar Nova Compra");
-        novaJanela.setScene(new Scene(root));
+        Stage newWindow = new Stage();
+        newWindow.setTitle("Adicionar Nova Compra");
+        newWindow.setScene(new Scene(root));
 
-        novaJanela.initModality(Modality.WINDOW_MODAL);
+        newWindow.initModality(Modality.WINDOW_MODAL);
+        newWindow.showAndWait();
+        updateResult(client);
+    }
 
-        novaJanela.showAndWait();
+    @FXML
+    public void confirmValue() throws IOException {
+        String currentClient = ApplicationController.client;
+        Map<String, Double> data = AccountsPersistanceHandler.loadData();
+        String inputText = input.getText();
+        if(inputText.contains(",")) inputText.replace(",", ".");
+
+        if (inputText.isBlank()) {
+            System.err.println("Erro: O campo de valor não pode estar vazio.");
+            return;
+        }
+
+        Double currentBalance = data.get(currentClient);
+
+        Double value = Double.parseDouble(inputText);
+        AccountsPersistanceHandler.addSale(currentClient, currentBalance + value);
+
+        Stage stage = (Stage) confirmButton.getScene().getWindow();
+        stage.close();
     }
 }
