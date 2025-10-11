@@ -1,7 +1,8 @@
 package com.gtsystems.bakerysystem;
 
-import com.gtsystems.bakerysystem.screens.HomeScreen;
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -9,8 +10,11 @@ import java.io.IOException;
 public class MainApp extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        HomeScreen homeScreen = new HomeScreen();
-        homeScreen.show(stage);
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("test.fxml"));
+        Scene scene = new Scene(fxmlLoader.load());
+        stage.setTitle("Exemplo JavaFX");
+        stage.setScene(scene);
+        stage.show();
     }
 
     public static void main(String[] args) {

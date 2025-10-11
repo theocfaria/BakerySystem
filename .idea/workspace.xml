@@ -5,16 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1efde4d2-88bd-40f7-9b79-cee24625410c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/UsersComponents/UsersComponent.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/TestController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/test.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/accounts.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/accounts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/GeneralInfoButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/AccountsButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/InfosComponents/ButtonNewSale.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/InfosComponents/InfosComponent.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/PertinentClientsComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/UserNameComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/SearchComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/components/SearchComponent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/screens/HomeScreen.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/screens/HomeScreen.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/screens/NewSaleScreen.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/MainApp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -24,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="FxmlFile" />
         <option value="Class" />
       </list>
     </option>
@@ -114,7 +110,9 @@
       <workItem from="1759189516349" duration="427000" />
       <workItem from="1759190993347" duration="5000" />
       <workItem from="1759195134752" duration="1478000" />
-      <workItem from="1759352535933" duration="3523000" />
+      <workItem from="1759352535933" duration="3646000" />
+      <workItem from="1759360592589" duration="485000" />
+      <workItem from="1760191737083" duration="1422000" />
     </task>
     <servers />
   </component>
