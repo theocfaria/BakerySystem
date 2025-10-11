@@ -43,8 +43,7 @@ public class AccountsPersistanceHandler {
 
     public static void addSale(String clientName, Double newSaleTotal) throws IOException {
         Map<String, Double> currentData = loadData();
-        Double oldTotal = currentData.get(clientName);
-        if(oldTotal != null) newSaleTotal += oldTotal;
+        currentData.remove(clientName);
         currentData.put(clientName, newSaleTotal);
         saveData(currentData);
     }
