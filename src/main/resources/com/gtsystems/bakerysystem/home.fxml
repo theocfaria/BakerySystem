@@ -61,7 +61,7 @@
             </Label>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="30.0">
                <children>
-                  <Button mnemonicParsing="false" prefHeight="56.0" prefWidth="134.0" text="NOVA COMPRA">
+                  <Button fx:id="addSaleButton" mnemonicParsing="false" onAction="#openNewSalePanel" prefHeight="56.0" prefWidth="134.0" text="NOVA COMPRA">
                      <font>
                         <Font name="System Bold" size="14.0" />
                      </font>
