@@ -25,6 +25,7 @@ public class ApplicationController {
     @FXML public Button searchButton = new Button();
     @FXML public Button payButton = new Button();
     @FXML public Button addSaleButton = new Button();
+    @FXML public Button allButton = new Button();
     @FXML public TextField input;
     @FXML Button cancelButton;
     @FXML Button confirmButton;
@@ -114,5 +115,52 @@ public class ApplicationController {
     public void cancel() throws IOException {
         Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
+    }
+
+    @FXML
+    public void openNewPaymentPanel() throws IOException {
+        client = searchField.getText();
+        FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("add-payment.fxml"));
+        Parent root = fxmlLoader.load();
+
+        Stage newWindow = new Stage();
+        newWindow.setTitle("Adicionar Novo Pagamento");
+        newWindow.setScene(new Scene(root));
+
+        newWindow.initModality(Modality.WINDOW_MODAL);
+        newWindow.showAndWait();
+        updateResult(client);
+    }
+
+    @FXML
+    public void confirmPayment() throws IOException {
+        String currentClient = ApplicationController.client;
+        Map<String, Double> data = AccountsPersistanceHandler.loadData();
+        String inputText = input.getText();
+
+        String cleanText = inputText.replace(",", ".");
+        Double currentBalance = data.getOrDefault(currentClient, 0.0);
+
+        try {
+            Double value = Double.parseDouble(cleanText);
+            if(value <= currentBalance) {
+                AccountsPersistanceHandler.addSale(currentClient, currentBalance - value);
+                Stage stage = (Stage) confirmButton.getScene().getWindow();
+                stage.close();
+            }
+            else {
+                input.setStyle("-fx-text-fill: red; -fx-border-color: red; -fx-border-width: 2; -fx-border-style: solid; -fx-border-radius: 2");
+            }
+
+        } catch (NumberFormatException e) {
+            System.err.println("Erro: O valor digitado não é um número válido.");
+        }
+    }
+
+    @FXML
+    public void setAll() throws IOException {
+        Map<String, Double> data = AccountsPersistanceHandler.loadData();
+        Double balance = data.get(client);
+        input.setText(balance.toString().replace(".", ","));
     }
 }
