@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="197.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gtsystems.bakerysystem.controllers.ApplicationController">
+<AnchorPane prefHeight="197.0" prefWidth="318.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gtsystems.bakerysystem.controllers.NewSaleController">
    <children>
       <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="28.0" prefHeight="38.0" prefWidth="263.0" style="-fx-border-color: BLACK; -fx-border-width: 0.5px;" text="ADICIONAR NOVA COMPRA">
          <font>
