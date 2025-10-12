@@ -41,10 +41,15 @@ public class ApplicationController {
 
     void updateResult(String key) throws IOException {
         Map<String, Double> data = AccountsPersistanceHandler.loadData();
-        String balance = data.get(key).toString();
+        Double balance = data.get(key);
+        if (balance == null) {
+            balance = 0.0;
+        }
+        String formattedBalance = String.format(new java.util.Locale("pt", "BR"), "%.2f", balance);
+
         resultLabel.setText(
                 "Nome: " + key + "\n" +
-                        "Total: R$" + balance.replace(".", ",")
+                        "Total: R$ " + formattedBalance
         );
     }
 
@@ -86,23 +91,28 @@ public class ApplicationController {
     }
 
     @FXML
-    public void confirmValue() throws IOException {
+    public void confirmSale() throws IOException {
         String currentClient = ApplicationController.client;
         Map<String, Double> data = AccountsPersistanceHandler.loadData();
         String inputText = input.getText();
-        if(inputText.contains(",")) inputText.replace(",", ".");
 
-        if (inputText.isBlank()) {
-            System.err.println("Erro: O campo de valor não pode estar vazio.");
-            return;
+        String cleanText = inputText.replace(",", ".");
+        Double currentBalance = data.getOrDefault(currentClient, 0.0);
+
+        try {
+            Double value = Double.parseDouble(cleanText);
+            AccountsPersistanceHandler.addSale(currentClient, currentBalance + value);
+            Stage stage = (Stage) confirmButton.getScene().getWindow();
+            stage.close();
+
+        } catch (NumberFormatException e) {
+            System.err.println("Erro: O valor digitado não é um número válido.");
         }
+    }
 
-        Double currentBalance = data.get(currentClient);
-
-        Double value = Double.parseDouble(inputText);
-        AccountsPersistanceHandler.addSale(currentClient, currentBalance + value);
-
-        Stage stage = (Stage) confirmButton.getScene().getWindow();
+    @FXML
+    public void cancel() throws IOException {
+        Stage stage = (Stage) cancelButton.getScene().getWindow();
         stage.close();
     }
 }
