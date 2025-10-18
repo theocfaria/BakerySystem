@@ -2,8 +2,10 @@ package com.gtsystems.bakerysystem.controllers;
 
 import com.gtsystems.bakerysystem.Main;
 import com.gtsystems.bakerysystem.persistence.AccountsPersistanceHandler;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -25,6 +27,7 @@ public class MainController {
     @FXML private HBox clientNotFoundContainer;
     @FXML private Label clientNotFoundLabel;
     @FXML private Button createClientButton;
+    @FXML private Button userListButton;
 
     private Map<String, Double> data;
 
@@ -124,6 +127,26 @@ public class MainController {
             this.data = AccountsPersistanceHandler.loadData();
             searchField.setText(clientNameFromSearch);
             searchUser();
+        }
+    }
+    @FXML
+    private void openUserListPanel(ActionEvent event) {
+        try {
+            FXMLLoader loader = new FXMLLoader(Main.class.getResource("user-list.fxml"));
+            Parent root = loader.load();
+
+            Node source = (Node) event.getSource();
+            Stage stagePrincipal = (Stage) source.getScene().getWindow();
+
+            double larguraAtual = stagePrincipal.getScene().getWidth();
+            double alturaAtual = stagePrincipal.getScene().getHeight();
+
+            Scene novaCena = new Scene(root, larguraAtual, alturaAtual);
+
+            stagePrincipal.setScene(novaCena);
+        } catch (IOException e) {
+            System.err.println("Falha ao carregar a tela de lista.");
+            e.printStackTrace();
         }
     }
 }

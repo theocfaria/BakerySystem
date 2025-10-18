@@ -95,5 +95,10 @@
             <Insets bottom="15.0" top="15.0" />
          </padding>
       </HBox>
+      <Button fx:id="uerListButton" layoutX="681.0" layoutY="29.0" mnemonicParsing="false" onAction="#openUserListPanel" prefHeight="56.0" prefWidth="162.0" text="Button">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>

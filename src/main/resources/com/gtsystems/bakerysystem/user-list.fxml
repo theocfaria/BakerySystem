@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8.0.171"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.gtsystems.bakerysystem.controllers.UserListController">
+    <children>
+
+        <ListView fx:id="userList"
+                  layoutX="50.0"
+                  layoutY="30.0"
+                  prefHeight="200.0"
+                  prefWidth="300.0" />
+
+    </children>
+</AnchorPane>

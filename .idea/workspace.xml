@@ -5,11 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1efde4d2-88bd-40f7-9b79-cee24625410c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/UserListController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/user-list.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/accounts.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/accounts.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/MainApp.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/MainApp.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/add-payment.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/add-payment.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/home.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
