@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="199.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gtsystems.bakerysystem.controllers.AddPaymentController">
+<AnchorPane minHeight="199.0" minWidth="347.0" prefHeight="199.0" prefWidth="347.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gtsystems.bakerysystem.controllers.AddPaymentController">
     <children>
         <Label alignment="CENTER" contentDisplay="CENTER" layoutX="28.0" layoutY="28.0" prefHeight="38.0" prefWidth="290.0" style="-fx-border-color: BLACK; -fx-border-width: 0.5px;" text="ADICIONAR NOVO PAGAMENTO">
             <font>

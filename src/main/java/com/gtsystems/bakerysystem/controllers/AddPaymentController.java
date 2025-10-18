@@ -26,7 +26,7 @@ public class AddPaymentController {
         String cleanText = input.getText().replace(",", ".");
         try {
             Double value = Double.parseDouble(cleanText);
-            if (value > 0 && value <= currentBalance) {
+            if (value >= 0 && value <= currentBalance) {
                 AccountsPersistanceHandler.addSale(currentClient, currentBalance - value);
                 closeWindow();
             } else {

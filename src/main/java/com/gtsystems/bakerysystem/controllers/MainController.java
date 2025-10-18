@@ -78,6 +78,7 @@ public class MainController {
         newWindow.setTitle("Adicionar Nova Compra");
         newWindow.setScene(new Scene(root));
         newWindow.initModality(Modality.WINDOW_MODAL);
+        newWindow.setResizable(false);
         newWindow.showAndWait();
         updateResult(client);
     }
@@ -97,6 +98,7 @@ public class MainController {
         newWindow.setTitle("Adicionar Novo Pagamento");
         newWindow.setScene(new Scene(root));
         newWindow.initModality(Modality.WINDOW_MODAL);
+        newWindow.setResizable(false);
         newWindow.showAndWait();
         updateResult(client);
     }
@@ -115,6 +117,7 @@ public class MainController {
         newWindow.setTitle("Adicionar Novo Cliente");
         newWindow.setScene(new Scene(root));
         newWindow.initModality(Modality.WINDOW_MODAL);
+        newWindow.setResizable(false);
         newWindow.showAndWait();
 
         if (newClientController.wasClientCreated()) {

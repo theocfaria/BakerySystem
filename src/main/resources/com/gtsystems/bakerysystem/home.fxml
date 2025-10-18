@@ -82,12 +82,12 @@
          <children>
             <Label fx:id="clientNotFoundLabel" alignment="CENTER_RIGHT" contentDisplay="TOP" prefHeight="78.0" prefWidth="278.0" text="Cliente não encontrado. ">
                <font>
-                  <Font size="24.0" />
+                  <Font size="22.0" />
                </font>
             </Label>
             <Button fx:id="createClientButton" mnemonicParsing="false" onAction="#openNewClientPanel" prefHeight="48.0" prefWidth="141.0" text="Criar Novo Cliente">
                <font>
-                  <Font name="System Bold" size="14.0" />
+                  <Font name="System Bold" size="13.0" />
                </font>
             </Button>
          </children>
