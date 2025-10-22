@@ -30,6 +30,8 @@ public class MainController {
     @FXML private Button userListButton;
 
     private Map<String, Double> data;
+        // Se tivesse outros labels, atualizaria eles aqui:
+        // clientEmailLabel.setText(cliente.getEmail());
 
     @FXML
     public void initialize() throws IOException {

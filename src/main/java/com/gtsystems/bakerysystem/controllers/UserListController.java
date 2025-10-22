@@ -1,48 +1,39 @@
 package com.gtsystems.bakerysystem.controllers;
 
-import com.google.gson.Gson; // Importar Gson
-import com.google.gson.reflect.TypeToken; // Importar TypeToken
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
+import com.gtsystems.bakerysystem.persistence.AccountsPersistanceHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
-import javafx.scene.control.ListView;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
-import java.io.FileReader;
-import java.io.Reader;
-import java.lang.reflect.Type;
-import java.net.URL;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Map;
-import java.util.ResourceBundle;
 
-public class UserListController implements Initializable {
+
+public class UserListController {
 
     @FXML
-    private ListView<String> userList;
-    @Override
-    public void initialize(URL location, ResourceBundle resources) {
-        Gson gson = new Gson();
-        Type tipoDoMapa = new TypeToken<Map<String, Double>>() {}.getType();
+    private VBox clientsContainer;
 
-        ObservableList<String> itensFormatados = FXCollections.observableArrayList();
+    @FXML
+    public void initialize() throws IOException {
+        Map<String, Double> data = AccountsPersistanceHandler.loadData();
+        for (Map.Entry<String, Double> cliente : data.entrySet()) {
+            try {
+                FXMLLoader loader = new FXMLLoader(getClass().getResource("client-data.fxml"));
+                HBox clientItemNode = loader.load();
 
-        try (Reader leitor = new FileReader("data/accounts.json")) {
+                ClientDataController itemController = loader.getController();
 
-            Map<String, Double> userMap = gson.fromJson(leitor, tipoDoMapa);
+                itemController.setData(cliente);
 
-            for (Map.Entry<String, Double> entry : userMap.entrySet()) {
-                String chave = entry.getKey();
-                Double valor = entry.getValue();
+                clientsContainer.getChildren().add(clientItemNode);
 
-                String itemFormatado = String.format("%s: R$ %.2f", chave, valor);
-
-                itensFormatados.add(itemFormatado);
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-
-            userList.setItems(itensFormatados);
-        } catch (Exception e) {
-            e.printStackTrace();
-            userList.getItems().add("Erro ao carregar dados do JSON.");
         }
     }
 }

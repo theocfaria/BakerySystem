@@ -1,18 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx/8.0.171"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.gtsystems.bakerysystem.controllers.UserListController">
-    <children>
-
-        <ListView fx:id="userList"
-                  layoutX="50.0"
-                  layoutY="30.0"
-                  prefHeight="200.0"
-                  prefWidth="300.0" />
-
-    </children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gtsystems.bakerysystem.controllers.UserListController">
+   <children>
+      <Label layoutX="250.0" layoutY="14.0" style="-fx-border-color: black; -fx-border-width: 1;" text="CLIENTES">
+         <font>
+            <Font size="22.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="63.0" layoutY="67.0" prefHeight="302.0" prefWidth="476.0">
+         <content>
+            <VBox fx:id="clientsContainer" prefHeight="304.0" prefWidth="461.0">
+               <children>
+                   <VBox fx:id="clientsContainer" spacing="10.0">
+                   </VBox>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+   </children>
 </AnchorPane>
