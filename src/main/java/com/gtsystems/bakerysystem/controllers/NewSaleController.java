@@ -22,43 +22,26 @@ public class NewSaleController {
 
     @FXML
     public void confirmSale() throws IOException {
-        // ----- DEBUG -----
-        // Vamos verificar se o nome do cliente realmente chegou aqui
-        System.out.println("[DEBUG] Tentando adicionar venda para: " + currentClient);
-        // ----- FIM DEBUG -----
-
         String cleanText = input.getText().replace(",", ".");
 
-        // Use um bloco catch mais amplo para pegar o NullPointerException
         try {
             Map<String, Double> data = AccountsPersistanceHandler.loadData();
             Double value = Double.parseDouble(cleanText);
 
             if (currentClient == null || currentClient.trim().isEmpty()) {
-                System.err.println("Erro: O nome do cliente está nulo ou vazio.");
-                // Você pode querer mostrar um Alert aqui
                 return;
             }
 
-            // --- ESTA É A MUDANÇA PRINCIPAL ---
-            // Se o cliente não existir no mapa, getOrDefault retorna 0.0
             Double currentValue = data.getOrDefault(currentClient, 0.0);
 
             Double newValue = currentValue + value;
-            // ------------------------------------
 
             AccountsPersistanceHandler.addSale(currentClient, newValue);
-
-            System.out.println("[DEBUG] Venda adicionada com sucesso. Novo saldo: " + newValue);
-
             closeWindow();
 
         } catch (NumberFormatException e) {
-            System.err.println("Erro: Formato de número inválido.");
             input.setStyle("-fx-border-color: red;");
         } catch (Exception e) {
-            // Captura qualquer outro erro (como o NullPointerException ou erros de I/O)
-            System.err.println("Erro inesperado ao confirmar a venda:");
             e.printStackTrace();
         }
     }

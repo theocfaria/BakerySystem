@@ -31,11 +31,15 @@ public class MainController {
     @FXML private Button userListButton;
 
     private Map<String, Double> data;
-    private String currentClient; // Variável para "lembrar" o cliente selecionado
+    private String currentClient;
 
     @FXML
     public void initialize() throws IOException {
         data = AccountsPersistanceHandler.loadData();
+        resultContainer.setVisible(false);
+        resultContainer.setManaged(false); // Não ocupa espaço
+        clientNotFoundContainer.setVisible(false);
+        clientNotFoundContainer.setManaged(false); // Não ocupa espaço
     }
 
     private void showResult() {
@@ -44,7 +48,6 @@ public class MainController {
     }
 
     public void updateResult(String key) throws IOException {
-        clientNotFoundContainer.setVisible(false);
         data = AccountsPersistanceHandler.loadData();
 
         Double balance = data.getOrDefault(key, 0.0);
@@ -59,22 +62,28 @@ public class MainController {
     @FXML
     void searchUser() throws IOException {
         String key = searchField.getText();
+
+        resultContainer.setVisible(false);
+        resultContainer.setManaged(false);
+        clientNotFoundContainer.setVisible(false);
+        clientNotFoundContainer.setManaged(false);
+
         if (data.containsKey(key)) {
-            this.currentClient = key; // Define o cliente atual
-            showResult();
+            this.currentClient = key;
+            resultContainer.setVisible(true);
+            resultContainer.setManaged(true);
             updateResult(key);
-            searchField.clear(); // Limpa o campo de busca (como você queria)
+            searchField.clear();
         } else {
-            this.currentClient = null; // Limpa o cliente atual
-            resultContainer.setVisible(false);
-            searchContainer.setLayoutY(206);
+            this.currentClient = null;
             clientNotFoundContainer.setVisible(true);
+            clientNotFoundContainer.setManaged(true);
         }
     }
 
     @FXML
     void openNewSalePanel() throws IOException {
-        String client = this.currentClient; // Usa o cliente "lembrado"
+        String client = this.currentClient;
 
         if (client == null || client.trim().isEmpty()) {
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -132,8 +141,6 @@ public class MainController {
 
     @FXML
     void openNewClientPanel() throws IOException {
-        // Este método está correto, pois deve usar o texto digitado
-        // para sugerir um nome para o novo cliente.
         String clientNameFromSearch = searchField.getText();
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("new-client.fxml"));
@@ -151,8 +158,8 @@ public class MainController {
 
         if (newClientController.wasClientCreated()) {
             this.data = AccountsPersistanceHandler.loadData();
-            searchField.setText(clientNameFromSearch); // Coloca o nome do novo cliente na barra...
-            searchUser(); // ...e o pesquisa, o que vai definir o 'currentClient'
+            searchField.setText(clientNameFromSearch);
+            searchUser();
         }
     }
     @FXML

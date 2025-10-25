@@ -1,0 +1,227 @@
+/* --- GERAL --- */
+.root {
+    -fx-background-color: #f4f7fa; /* Fundo cinza claro */
+    -fx-font-family: "Inter", "Segoe UI", "Arial", sans-serif;
+}
+
+/* --- CABEÇALHO (TOP) --- */
+.header {
+    -fx-background-color: #ffffff;
+    -fx-padding: 15px 30px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 10, 0, 0, 3);
+    -fx-alignment: center-left;
+}
+
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1a202c;
+}
+
+.nav-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #4a5568;
+    -fx-background-color: transparent;
+    -fx-padding: 8px 12px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.nav-button:hover {
+    -fx-background-color: #f1f5f9;
+    -fx-text-fill: #2d3748;
+}
+
+/* --- BARRA DE PESQUISA (CENTER) --- */
+.search-container {
+    -fx-alignment: center;
+    -fx-spacing: 0;
+}
+
+.search-bar {
+    -fx-font-size: 18px;
+    -fx-padding: 15px 20px;
+    -fx-prompt-text-fill: #a0aec0;
+    -fx-background-color: #ffffff;
+    /* Borda apenas à esquerda, cima, baixo */
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1px 0 1px 1px;
+    -fx-border-radius: 8px 0 0 8px; /* Arredonda canto esquerdo */
+    -fx-background-radius: 8px 0 0 8px;
+}
+
+.search-bar:focused {
+    -fx-border-color: #3182ce;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(49, 130, 206, 0.2), 10, 0, 0, 0);
+}
+
+.search-button {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #ffffff;
+    -fx-background-color: #3182ce; /* Azul */
+    -fx-padding: 16px 25px;
+    -fx-border-radius: 0 8px 8px 0; /* Arredonda canto direito */
+    -fx-background-radius: 0 8px 8px 0;
+    -fx-cursor: hand;
+}
+
+.search-button:hover {
+    -fx-background-color: #2b6cb0;
+}
+
+/* --- CARDS DE RESULTADO --- */
+.card {
+    -fx-background-color: #ffffff;
+    -fx-padding: 25px;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-border-color: #e2e8f0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.04), 15, 0, 0, 4);
+    -fx-spacing: 20px;
+}
+
+.result-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: 400;
+    -fx-line-spacing: 8px;
+    -fx-text-fill: #2d3748;
+    -fx-padding: 0 0 15px 0;
+    -fx-border-color: transparent transparent #e2e8f0 transparent; /* Linha inferior */
+    -fx-border-width: 1px;
+}
+
+.not-found-label {
+    -fx-font-size: 18px;
+    -fx-text-fill: #4a5568;
+    -fx-padding: 10px 0;
+    -fx-justify-content: space-between;
+}
+
+.button-row {
+    -fx-padding: 10px 0 0 0;
+}
+
+/* --- BOTÕES DOS CARDS --- */
+.card-button-success, .card-button-primary, .card-button-secondary {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+    -fx-padding: 14px 22px;
+    -fx-background-radius: 8px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 8, 0, 0, 2);
+}
+
+.card-button-success {
+    -fx-background-color: #38a169; /* Verde */
+}
+.card-button-success:hover {
+    -fx-background-color: #2f855a;
+}
+
+.card-button-primary {
+    -fx-background-color: #3182ce; /* Azul */
+}
+.card-button-primary:hover {
+    -fx-background-color: #2b6cb0;
+}
+
+.card-button-secondary {
+    -fx-background-color: #718096; /* Cinza */
+}
+.card-button-secondary:hover {
+    -fx-background-color: #4a5568;
+}
+
+/* --- DIÁLOGOS (NewSale, AddPayment, NewClient) --- */
+.dialog-root {
+    -fx-background-color: #f4f7fa; /* Fundo cinza claro */
+    -fx-font-family: "Inter", "Segoe UI", "Arial", sans-serif;
+}
+
+.dialog-title {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #1a202c;
+    -fx-padding: 10px 0;
+    -fx-border-color: transparent transparent #e2e8f0 transparent;
+    -fx-border-width: 1px;
+    -fx-alignment: center;
+    -fx-pref-width: 9000; /* Faz a label preencher a largura */
+}
+
+.dialog-text-field {
+    -fx-font-size: 16px;
+    -fx-padding: 12px 15px;
+    -fx-prompt-text-fill: #a0aec0;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+.dialog-text-field:focused {
+    -fx-border-color: #3182ce;
+    -fx-effect: dropshadow(gaussian, rgba(49, 130, 206, 0.2), 8, 0, 0, 0);
+}
+
+.dialog-button-primary, .dialog-button-secondary {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+    -fx-padding: 10px 18px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 6, 0, 0, 1);
+}
+
+.dialog-button-primary {
+    -fx-background-color: #3182ce; /* Azul */
+}
+.dialog-button-primary:hover {
+    -fx-background-color: #2b6cb0;
+}
+
+.dialog-button-secondary {
+    -fx-background-color: #718096; /* Cinza */
+}
+.dialog-button-secondary:hover {
+    -fx-background-color: #4a5568;
+}
+
+/* --- ESTILOS DE FORMULÁRIO (NewClient) --- */
+.form-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #4a5568;
+    -fx-padding: 0 0 0 5px;
+}
+
+.form-error-label {
+    -fx-font-size: 12px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #e53e3e; /* Vermelho */
+    -fx-padding: 2px 0 0 5px;
+}
+
+/* Aplica o estilo de diálogo ao TextField também */
+#clientNameTextField, #clientBillTextField {
+    -fx-font-size: 16px;
+    -fx-padding: 12px 15px;
+    -fx-prompt-text-fill: #a0aec0;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #e2e8f0;
+    -fx-border-width: 1px;
+    -fx-border-radius: 8px;
+    -fx-background-radius: 8px;
+}
+
+#clientNameTextField:focused, #clientBillTextField:focused {
+    -fx-border-color: #3182ce;
+    -fx-effect: dropshadow(gaussian, rgba(49, 130, 206, 0.2), 8, 0, 0, 0);
+}
