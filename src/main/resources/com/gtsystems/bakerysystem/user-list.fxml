@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gtsystems.bakerysystem.controllers.UserListController">
-   <children>
-      <Label layoutX="250.0" layoutY="14.0" style="-fx-border-color: black; -fx-border-width: 1;" text="CLIENTES">
-         <font>
-            <Font size="22.0" />
-         </font>
-      </Label>
-      <ScrollPane layoutX="63.0" layoutY="67.0" prefHeight="302.0" prefWidth="476.0">
-         <content>
-            <VBox fx:id="clientsContainer" prefHeight="304.0" prefWidth="461.0">
-               <children>
-                   <VBox fx:id="clientsContainer" spacing="10.0">
-                   </VBox>
-               </children>
-            </VBox>
-         </content>
-      </ScrollPane>
-   </children>
-</AnchorPane>
+<BorderPane prefHeight="600.0" prefWidth="900.0" styleClass="root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gtsystems.bakerysystem.controllers.UserListController">
+    <top>
+        <HBox styleClass="header" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="backButton" mnemonicParsing="false" onAction="#goBack" styleClass="nav-button" text="&lt; Voltar" />
+                <Label styleClass="title-label" text="Lista de Clientes">
+                    <HBox.margin>
+                        <Insets left="20.0" />
+                    </HBox.margin>
+                </Label>
+                <Pane HBox.hgrow="ALWAYS" />
+            </children>
+        </HBox>
+    </top>
+    <center>
+        <ScrollPane fitToWidth="true" hbarPolicy="NEVER" styleClass="scroll-pane" BorderPane.alignment="CENTER">
+            <content>
+                <VBox fx:id="userListContainer" alignment="TOP_CENTER" spacing="10.0" styleClass="list-container">
+                    <padding>
+                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                    </padding>
+                </VBox>
+            </content>
+            <BorderPane.margin>
+                <Insets bottom="20.0" left="100.0" right="100.0" top="20.0" />
+            </BorderPane.margin>
+        </ScrollPane>
+    </center>
+</BorderPane>

@@ -225,3 +225,118 @@
     -fx-border-color: #3182ce;
     -fx-effect: dropshadow(gaussian, rgba(49, 130, 206, 0.2), 8, 0, 0, 0);
 }
+
+/* --- ESTILOS DA PÁGINA DE LISTA --- */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-background-insets: 0;
+    -fx-padding: 0;
+}
+
+.list-container {
+    /* O fundo vem do .root, que é cinza claro */
+    -fx-background-color: transparent;
+}
+
+/* --- ESTILOS DO ITEM DA LISTA (LINHA) --- */
+.list-item-row {
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px;
+    -fx-background-radius: 12px;
+    -fx-border-radius: 12px;
+    -fx-border-width: 1px;
+    -fx-border-color: #e2e8f0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.04), 15, 0, 0, 4);
+    -fx-spacing: 15px;
+}
+
+.list-item-title {
+    -fx-font-size: 18px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #1a202c;
+}
+
+.list-item-subtitle {
+    -fx-font-size: 14px;
+    -fx-text-fill: #4a5568;
+    -fx-padding-top: 4px;
+}
+
+.list-button-edit, .list-button-delete {
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-padding: 8px 14px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+}
+
+.list-button-edit {
+    -fx-background-color: #3182ce;
+    -fx-text-fill: white;
+    -fx-border-width: 1px;
+}
+.list-button-edit:hover {
+    -fx-background-color: #124d84;
+}
+
+.list-button-delete {
+    -fx-background-color: #e53e3e; /* Vermelho */
+    -fx-text-fill: white;
+}
+.list-button-delete:hover {
+    -fx-background-color: #c53030;
+}
+
+/* --- ESTILOS DE ALERTA DE EXCLUSÃO --- */
+
+/* Aplica o fundo e fonte padrão do diálogo */
+.delete-alert.dialog-pane {
+    -fx-background-color: #f4f7fa;
+    -fx-font-family: "Inter", "Segoe UI", "Arial", sans-serif;
+    -fx-border-width: 1px;
+    -fx-border-color: #e2e8f0;
+}
+
+/* Estiliza o painel do cabeçalho (onde o texto do header fica) */
+.delete-alert .header-panel {
+    -fx-background-color: #f4f7fa; /* Mesmo fundo */
+    -fx-padding-bottom: 10px;
+}
+
+/* Estiliza o TEXTO DO CABEÇALHO (ex: "Excluir João da Silva?") */
+.delete-alert .header-panel .label {
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #c53030; /* Vermelho escuro */
+}
+
+/* Estiliza o texto do conteúdo (a mensagem menor) */
+.delete-alert .content.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #4a5568;
+    -fx-line-spacing: 4px;
+}
+
+/* Oculta o gráfico padrão (o ícone de interrogação) */
+.delete-alert .graphic {
+    -fx-background-image: none;
+    -fx-pref-width: 0;
+    -fx-padding: 0;
+}
+
+/* Nova classe para o botão de confirmação de exclusão (OK)
+  (Baseado no dialog-button-primary)
+*/
+.dialog-button-delete {
+    -fx-font-size: 14px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+    -fx-padding: 10px 18px;
+    -fx-background-radius: 6px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.08), 6, 0, 0, 1);
+    -fx-background-color: #e53e3e; /* Vermelho */
+}
+.dialog-button-delete:hover {
+    -fx-background-color: #c53030;
+}

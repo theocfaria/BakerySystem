@@ -41,6 +41,23 @@ public class AccountsPersistanceHandler {
         }
     }
 
+    public static void removeUser(String clientName) throws IOException {
+        Map<String, Double> accounts = loadData();
+        accounts.remove(clientName);
+        saveData(accounts);
+    }
+
+    public static void updateUser(String oldName, String newName, double newBalance) throws IOException {
+        Map<String, Double> data = loadData();
+
+        if (!oldName.equals(newName)) {
+            data.remove(oldName);
+        }
+
+        data.put(newName, newBalance);
+        saveData(data);
+    }
+
     public static void addSale(String clientName, Double newSaleTotal) throws IOException {
         Map<String, Double> currentData = loadData();
         currentData.remove(clientName);

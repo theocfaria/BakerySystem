@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="TOP_CENTER" prefWidth="480.0" spacing="15.0" styleClass="dialog-root" stylesheets="@styles.css" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gtsystems.bakerysystem.controllers.EditUserController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <Label styleClass="dialog-title" text="EDITAR CLIENTE" />
+
+        <VBox spacing="5.0">
+            <children>
+                <Label styleClass="form-label" text="Nome do Cliente" />
+                <TextField fx:id="clientNameTextField" onAction="#saveChanges" prefHeight="46.0" />
+                <Label fx:id="clientNameExistsLabel" styleClass="form-error-label" text="Este nome de cliente já existe." visible="false" />
+            </children>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </VBox>
+
+        <VBox spacing="5.0">
+            <children>
+                <Label styleClass="form-label" text="Valor da Conta" />
+                <TextField fx:id="clientBillTextField" onAction="#saveChanges" prefHeight="46.0" />
+            </children>
+        </VBox> <HBox alignment="CENTER_RIGHT" spacing="10.0">
+        <children>
+            <Button fx:id="cancelButton" mnemonicParsing="false" onAction="#cancel" styleClass="dialog-button-secondary" text="Cancelar" />
+            <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveChanges" styleClass="dialog-button-primary" text="Salvar" />
+        </children>
+        <VBox.margin>
+            <Insets top="15.0" />
+        </VBox.margin>
+    </HBox>
+    </children>
+</VBox>
