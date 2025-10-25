@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1efde4d2-88bd-40f7-9b79-cee24625410c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/ClientDataController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/client-data.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data/accounts.json" beforeDir="false" afterPath="$PROJECT_DIR$/data/accounts.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/UserListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/UserListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/home.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/home.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/user-list.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/gtsystems/bakerysystem/user-list.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/NewSaleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gtsystems/bakerysystem/controllers/NewSaleController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,12 +32,12 @@
     &quot;assignee&quot;: &quot;Gabriel-Andrioli&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/theocfaria/bakerysystem",
-    "accountId": "1c8d6e34-14db-4859-b467-017e1304fd16"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/theocfaria/bakerysystem&quot;,
+    &quot;accountId&quot;: &quot;1c8d6e34-14db-4859-b467-017e1304fd16&quot;
   }
-}]]></component>
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 5
 }</component>

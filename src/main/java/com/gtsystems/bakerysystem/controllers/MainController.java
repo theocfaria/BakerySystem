@@ -8,6 +8,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -30,8 +31,7 @@ public class MainController {
     @FXML private Button userListButton;
 
     private Map<String, Double> data;
-        // Se tivesse outros labels, atualizaria eles aqui:
-        // clientEmailLabel.setText(cliente.getEmail());
+    private String currentClient; // Variável para "lembrar" o cliente selecionado
 
     @FXML
     public void initialize() throws IOException {
@@ -60,10 +60,12 @@ public class MainController {
     void searchUser() throws IOException {
         String key = searchField.getText();
         if (data.containsKey(key)) {
+            this.currentClient = key; // Define o cliente atual
             showResult();
             updateResult(key);
-            searchField.clear();
+            searchField.clear(); // Limpa o campo de busca (como você queria)
         } else {
+            this.currentClient = null; // Limpa o cliente atual
             resultContainer.setVisible(false);
             searchContainer.setLayoutY(206);
             clientNotFoundContainer.setVisible(true);
@@ -72,7 +74,17 @@ public class MainController {
 
     @FXML
     void openNewSalePanel() throws IOException {
-        String client = searchField.getText();
+        String client = this.currentClient; // Usa o cliente "lembrado"
+
+        if (client == null || client.trim().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro ao Lançar Venda");
+            alert.setHeaderText("Nenhum cliente selecionado");
+            alert.setContentText("Por favor, pesquise por um cliente válido antes de adicionar uma venda.");
+            alert.showAndWait();
+            return;
+        }
+
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("new-sale.fxml"));
         Parent root = fxmlLoader.load();
 
@@ -80,7 +92,7 @@ public class MainController {
         newSaleController.initData(client);
 
         Stage newWindow = new Stage();
-        newWindow.setTitle("Adicionar Nova Compra");
+        newWindow.setTitle("Adicionar Compra para: " + client);
         newWindow.setScene(new Scene(root));
         newWindow.initModality(Modality.WINDOW_MODAL);
         newWindow.setResizable(false);
@@ -90,7 +102,17 @@ public class MainController {
 
     @FXML
     void openNewPaymentPanel() throws IOException {
-        String client = searchField.getText();
+        String client = this.currentClient; // Usa o cliente "lembrado"
+
+        if (client == null || client.trim().isEmpty()) {
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setTitle("Erro ao Lançar Pagamento");
+            alert.setHeaderText("Nenhum cliente selecionado");
+            alert.setContentText("Por favor, pesquise por um cliente válido antes de adicionar um pagamento.");
+            alert.showAndWait();
+            return;
+        }
+
         Double balance = data.getOrDefault(client, 0.0);
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("add-payment.fxml"));
@@ -100,7 +122,7 @@ public class MainController {
         addPaymentController.initData(client, balance);
 
         Stage newWindow = new Stage();
-        newWindow.setTitle("Adicionar Novo Pagamento");
+        newWindow.setTitle("Adicionar Pagamento de: " + client);
         newWindow.setScene(new Scene(root));
         newWindow.initModality(Modality.WINDOW_MODAL);
         newWindow.setResizable(false);
@@ -110,6 +132,8 @@ public class MainController {
 
     @FXML
     void openNewClientPanel() throws IOException {
+        // Este método está correto, pois deve usar o texto digitado
+        // para sugerir um nome para o novo cliente.
         String clientNameFromSearch = searchField.getText();
 
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("new-client.fxml"));
@@ -127,8 +151,8 @@ public class MainController {
 
         if (newClientController.wasClientCreated()) {
             this.data = AccountsPersistanceHandler.loadData();
-            searchField.setText(clientNameFromSearch);
-            searchUser();
+            searchField.setText(clientNameFromSearch); // Coloca o nome do novo cliente na barra...
+            searchUser(); // ...e o pesquisa, o que vai definir o 'currentClient'
         }
     }
     @FXML
